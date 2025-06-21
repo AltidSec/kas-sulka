@@ -1,0 +1,9 @@
+header:
+  version: 1
+  includes:
+    - kas-layers.yml
+
+machine: qemux86-64
+distro: sulka
+target: core-image-base
+

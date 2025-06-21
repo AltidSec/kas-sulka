@@ -1,0 +1,20 @@
+header:
+  version: 1
+
+repos:
+  poky:
+    url: git://git.yoctoproject.org/poky
+    tag: scarthgap-5.0.10
+    layers:
+      meta:
+      meta-yocto-bsp:
+  meta-openembedded:
+    url: http://git.openembedded.org/meta-openembedded
+    commit: 491671faee11ea131feab5a3a451d1a01deb2ab1
+    layers:
+      meta-oe:
+      meta-python:
+      meta-networking:
+  meta-sulka-distro:
+    url: https://codeberg.org/AltidSec/meta-sulka-distro.git
+    branch: scarthgap
