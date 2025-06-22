@@ -29,5 +29,5 @@ To build Sulka using kas, do the following:
 
 1. For advanced use, you may want to check out `kas shell` command:
     ```
-    kas shell kas-project.yml -c 'bitbake -e core-image-base'
+    kas shell kas-sulka.yml -c 'bitbake -e core-image-base'
     ```
