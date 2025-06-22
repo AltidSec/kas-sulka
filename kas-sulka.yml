@@ -2,6 +2,7 @@ header:
   version: 1
   includes:
     - kas-layers.yml
+    - kas-sulka-configuration.yml
 
 machine: qemux86-64
 distro: sulka
