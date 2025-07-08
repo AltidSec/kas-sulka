@@ -1,11 +1,6 @@
 header:
   version: 1
 
-repos:
-  meta-security:
-    url: git://git.yoctoproject.org/meta-security
-    commit: bc865c5276c2ab4031229916e8d7c20148dfbac3
-
 local_conf_header:
   audit: |
     IMAGE_INSTALL:append = " lynis openscap scap-security-guide"

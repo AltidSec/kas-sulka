@@ -15,6 +15,9 @@ repos:
       meta-oe:
       meta-python:
       meta-networking:
+  meta-security:
+    url: git://git.yoctoproject.org/meta-security
+    commit: bc865c5276c2ab4031229916e8d7c20148dfbac3
   meta-sulka-distro:
     url: https://codeberg.org/AltidSec/meta-sulka-distro.git
     branch: scarthgap
