@@ -2,5 +2,5 @@ header:
   version: 1
 
 local_conf_header:
-  development: |
+  50-development: |
     IMAGE_FEATURES:append = " ssh-server-openssh"

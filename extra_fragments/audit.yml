@@ -2,5 +2,5 @@ header:
   version: 1
 
 local_conf_header:
-  audit: |
+  30-audit: |
     IMAGE_INSTALL:append = " lynis openscap scap-security-guide"

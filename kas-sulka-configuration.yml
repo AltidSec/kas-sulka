@@ -2,6 +2,5 @@ header:
   version: 1
 
 local_conf_header:
-  kas-sulka: |
+  10-kas-sulka: |
     SULKA_SERVICEUSER_PASSWORD = ""
-
