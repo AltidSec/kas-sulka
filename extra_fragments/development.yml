@@ -4,3 +4,4 @@ header:
 local_conf_header:
   50-development: |
     IMAGE_FEATURES:append = " ssh-server-openssh"
+    SULKA_NFTABLES_CONF = "nftables-allow-established-lo-ssh-icmp-outgoing.conf"
