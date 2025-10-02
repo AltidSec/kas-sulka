@@ -3,4 +3,4 @@ header:
 
 local_conf_header:
   30-audit: |
-    IMAGE_INSTALL:append = " lynis openscap scap-security-guide"
+    IMAGE_INSTALL:append = " lynis openscap scap-security-guide kernel-hardening-checker "
