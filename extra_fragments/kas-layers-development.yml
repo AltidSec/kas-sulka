@@ -1,0 +1,16 @@
+header:
+  version: 1
+
+repos:
+  meta-sulka-distro:
+    tag: ""
+    commit: ""
+    branch: scarthgap-next
+  meta-sulka-kernel:
+    tag: ""
+    commit: ""
+    branch: scarthgap-next
+  meta-sulka-bsp:
+    tag: ""
+    commit: ""
+    branch: scarthgap-next
