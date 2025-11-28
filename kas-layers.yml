@@ -24,15 +24,16 @@ repos:
       meta-integrity:
   meta-sulka-distro:
     url: https://codeberg.org/AltidSec/meta-sulka-distro.git
-    tag: 0.2.0
-    commit: ea80607377d6dcf62b6a39669220ee159efdefa8
+    tag: 0.3.0
+    commit: 5ff908473e067ca0011ef3075885731d105c878e
   meta-sulka-kernel:
     url: https://codeberg.org/AltidSec/meta-sulka-kernel.git
-    tag: 0.2.0
-    commit: 6565e7a9badd50e50bfb1b6ba69637b451aea286
+    tag: 0.3.0
+    commit: 535899060150664e6a74cb727ae6f6f75990d07f
   meta-sulka-bsp:
     url: https://codeberg.org/AltidSec/meta-sulka-bsp.git
-    branch: scarthgap
+    tag: 0.3.0
+    commit: 17a36eba5ca0a6827295b8fbf6ef080ffe178ad6
   meta-selinux:
     url: git://git.yoctoproject.org/meta-selinux
     commit: c999577d7ab4b1b54fff61ab15c46a6f9e242d0d
