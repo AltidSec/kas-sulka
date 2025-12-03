@@ -38,3 +38,7 @@ repos:
     url: git://git.yoctoproject.org/meta-selinux
     commit: c999577d7ab4b1b54fff61ab15c46a6f9e242d0d
     branch: scarthgap
+  meta-clang:
+    url: https://github.com/kraj/meta-clang.git
+    commit: 731488911f55ebfe746068512b426351192f82f2
+    branch: scarthgap
