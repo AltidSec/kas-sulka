@@ -2,21 +2,21 @@ header:
   version: 1
 repos:
   poky:
-    url: git://git.yoctoproject.org/poky
+    url: https://git.yoctoproject.org/poky
     tag: scarthgap-5.0.12
     commit: ec220ae083dba35c279192b2249ad03fe238446e
     layers:
       meta:
       meta-yocto-bsp:
   meta-openembedded:
-    url: http://git.openembedded.org/meta-openembedded
+    url: https://git.openembedded.org/meta-openembedded
     commit: e621da947048842109db1b4fd3917a02e0501aa2
     layers:
       meta-oe:
       meta-python:
       meta-networking:
   meta-security:
-    url: git://git.yoctoproject.org/meta-security
+    url: https://git.yoctoproject.org/meta-security
     commit: bc865c5276c2ab4031229916e8d7c20148dfbac3
     layers:
       ../meta-security:
@@ -34,7 +34,7 @@ repos:
     tag: 0.5.0
     commit: 17a36eba5ca0a6827295b8fbf6ef080ffe178ad6
   meta-selinux:
-    url: git://git.yoctoproject.org/meta-selinux
+    url: https://git.yoctoproject.org/meta-selinux
     commit: c999577d7ab4b1b54fff61ab15c46a6f9e242d0d
     branch: scarthgap
   meta-clang:
