@@ -1,26 +1,40 @@
 header:
   version: 1
 repos:
-  poky:
-    url: https://git.yoctoproject.org/poky
-    tag: scarthgap-5.0.12
-    commit: ec220ae083dba35c279192b2249ad03fe238446e
+  bitbake:
+    url: https://git.openembedded.org/bitbake
+    tag: yocto-6.0
+    commit: 33581c84f3a85008239acbd940501a35de48dc91
+    layers:
+      bitbake: disabled
+  openembedded-core:
+    url: https://git.openembedded.org/openembedded-core
+    tag: yocto-6.0
+    commit: 42fa856a00ac16b2a7a83d7ecfa60a5be192b16c
     layers:
       meta:
-      meta-yocto-bsp:
   meta-openembedded:
     url: https://git.openembedded.org/meta-openembedded
-    commit: e621da947048842109db1b4fd3917a02e0501aa2
+    branch: wrynose
+    commit: 420222862f5a6d95023b8f5f3b7e1808b2264ef9
     layers:
       meta-oe:
       meta-python:
       meta-networking:
   meta-security:
     url: https://git.yoctoproject.org/meta-security
-    commit: bc865c5276c2ab4031229916e8d7c20148dfbac3
+    branch: wrynose
+    commit: 925357d25af4534807647d2a1d99e5b6c6df3af4
     layers:
       ../meta-security:
       meta-integrity:
+  meta-selinux:
+    url: https://git.yoctoproject.org/meta-selinux
+    branch: wrynose
+    commit: 1ba26da4b9bec3f102bd831efe0db00c7d61f7f2
+  meta-clang:
+    url: https://github.com/kraj/meta-clang.git
+    commit: 78c5e12f08198f4f257a9348516d2103cd617c1d
   meta-sulka-distro:
     url: https://codeberg.org/AltidSec/meta-sulka-distro.git
     tag: 0.5.1
@@ -33,11 +47,3 @@ repos:
     url: https://codeberg.org/AltidSec/meta-sulka-bsp.git
     tag: 0.5.1
     commit: 17a36eba5ca0a6827295b8fbf6ef080ffe178ad6
-  meta-selinux:
-    url: https://git.yoctoproject.org/meta-selinux
-    commit: c999577d7ab4b1b54fff61ab15c46a6f9e242d0d
-    branch: scarthgap
-  meta-clang:
-    url: https://github.com/kraj/meta-clang.git
-    commit: 731488911f55ebfe746068512b426351192f82f2
-    branch: scarthgap

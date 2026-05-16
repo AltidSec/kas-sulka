@@ -1,3 +1,5 @@
 build
 meta-*
-poky
+bitbake
+openembedded-core
+auth-keys
