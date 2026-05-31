@@ -5,12 +5,12 @@ repos:
   meta-sulka-distro:
     tag: ""
     commit: ""
-    branch: scarthgap-next
+    branch: wrynose-next
   meta-sulka-kernel:
     tag: ""
     commit: ""
-    branch: scarthgap-next
+    branch: wrynose-next
   meta-sulka-bsp:
     tag: ""
     commit: ""
-    branch: scarthgap-next
+    branch: wrynose-next
