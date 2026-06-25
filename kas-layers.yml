@@ -37,13 +37,13 @@ repos:
     commit: 78c5e12f08198f4f257a9348516d2103cd617c1d
   meta-sulka-distro:
     url: https://codeberg.org/AltidSec/meta-sulka-distro.git
-    tag: 0.5.1
-    commit: f4e1cd41b4b814a574e540c97206a05ee90e02ad
+    tag: 1.0.0
+    commit: 7bcdd777fea365eddc0b96899a46e8813382022e
   meta-sulka-kernel:
     url: https://codeberg.org/AltidSec/meta-sulka-kernel.git
-    tag: 0.5.1
-    commit: 66bc1e664aca41924dce6a8122dbbecfed77bb5b
+    tag: 1.0.0
+    commit: 6539401e8d0f72560943868faed894680376d4bf
   meta-sulka-bsp:
     url: https://codeberg.org/AltidSec/meta-sulka-bsp.git
-    tag: 0.5.1
-    commit: 17a36eba5ca0a6827295b8fbf6ef080ffe178ad6
+    tag: 1.0.0
+    commit: b88b9c7d281e8c8e0ce76f6799f169bd751b0979
