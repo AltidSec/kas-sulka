@@ -3,21 +3,23 @@ header:
 repos:
   poky:
     url: https://git.yoctoproject.org/poky
-    tag: scarthgap-5.0.12
-    commit: ec220ae083dba35c279192b2249ad03fe238446e
+    commit: 6ccffb86e86b4d41f61dc0c06c2b732c72676537
+    branch: scarthgap
     layers:
       meta:
       meta-yocto-bsp:
   meta-openembedded:
     url: https://git.openembedded.org/meta-openembedded
-    commit: e621da947048842109db1b4fd3917a02e0501aa2
+    commit: 7eb94107580092f79ff1b639a87762fe6f96aa12
+    branch: scarthgap
     layers:
       meta-oe:
       meta-python:
       meta-networking:
   meta-security:
     url: https://git.yoctoproject.org/meta-security
-    commit: bc865c5276c2ab4031229916e8d7c20148dfbac3
+    commit: b13f1705d723650de61277670c8a76aadea4cfdd
+    branch: scarthgap
     layers:
       ../meta-security:
       meta-integrity:
@@ -35,9 +37,9 @@ repos:
     commit: 17a36eba5ca0a6827295b8fbf6ef080ffe178ad6
   meta-selinux:
     url: https://git.yoctoproject.org/meta-selinux
-    commit: c999577d7ab4b1b54fff61ab15c46a6f9e242d0d
+    commit: 48f745109a1ecea9afe2a74d41dbd90fa7b370af
     branch: scarthgap
   meta-clang:
     url: https://github.com/kraj/meta-clang.git
-    commit: 731488911f55ebfe746068512b426351192f82f2
+    commit: 7cf54f70cebe897d844f649024322bb096d7cb50
     branch: scarthgap
