@@ -3,13 +3,33 @@
 set -e
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 
-echo --------------------------------------------------
-echo                      IMPORTANT
-echo --------------------------------------------------
+echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+echo "                      IMPORTANT"
+echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 echo
-echo Ensure that the req_distinguished_name content is correct
-echo both in meta-security/meta-integrity/scripts/ima-gen-local-ca.sh
-echo and meta-security/meta-integrity/scripts/ima-gen-CA-signed.sh
+echo Ensure that the certificate content is correct both in
+echo meta-security/meta-integrity/scripts/ima-gen-local-ca.sh and
+echo meta-security/meta-integrity/scripts/ima-gen-CA-signed.sh.
+echo The signing certificate contents are generated with this
+echo information.
+echo
+echo The default content is fine for testing, but for
+echo production systems you will want to double-check this
+echo information and configuration.
+echo
+echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+echo
+
+echo "Type Y to continue: "
+read confirm
+
+confirm=$(echo "$confirm" | tr '[:upper:]' '[:lower:]')
+
+if [ "$confirm" != "y" ]; then
+    echo "Aborted."
+    exit 1
+fi
+
 echo
 # Generate the certificate authority for IMA, EVM, and module signing.
 # This certificate authority will be used to sign the IMA & EVM and modsign certificate signing requests.
