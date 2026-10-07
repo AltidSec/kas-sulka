@@ -1,0 +1,8 @@
+header:
+  version: 1
+
+machine: qemuarm64
+
+local_conf_header:
+  05-qemuarm64: |
+    SERIAL_CONSOLES:remove = "115200;hvc0"
