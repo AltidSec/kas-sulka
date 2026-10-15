@@ -6,3 +6,28 @@ machine: qemuarm64
 local_conf_header:
   05-qemuarm64: |
     SERIAL_CONSOLES:remove = "115200;hvc0"
+  20-qemuarm64-verified-boot: |
+    SULKA_ENABLE_VERIFIED_BOOT ?= "1"
+    SULKA_FIT_IMAGE_RECIPE ?= "linux-yocto-fitimage"
+
+    # The dumped device tree of the virt machine describes this memory size,
+    # so run the image with it when verified boot is enabled
+    QB_MEM:sulka-verified-boot = "-m 1024"
+
+    # Verified boot: QEMU runs U-Boot, which loads the signed FIT image from
+    # the first partition of the disk image. The device tree of the virt
+    # machine is dumped at build time, see qemu-virt-dtb in meta-sulka-bsp.
+    PREFERRED_PROVIDER_virtual/dtb:sulka-verified-boot = "qemu-virt-dtb"
+    FIT_CONF_DEFAULT_DTB:sulka-verified-boot = "qemu-virt.dtb"
+    UBOOT_LOADADDRESS:sulka-verified-boot = "0x40400000"
+    UBOOT_ENTRYPOINT:sulka-verified-boot = "0x40400000"
+    IMAGE_FSTYPES:append:sulka-verified-boot = " wic"
+    IMAGE_TYPEDEP:wic:append:sulka-verified-boot = " ${SULKA_ROOTFS_IMAGE_TYPE}"
+    WKS_FILE:sulka-verified-boot = "sulka-verified-boot-qemuarm64.wks.in"
+    IMAGE_BOOT_FILES:sulka-verified-boot = "fitImage"
+    QB_DEFAULT_BIOS:sulka-verified-boot = "u-boot.bin"
+    QB_DEFAULT_KERNEL:sulka-verified-boot = "none"
+    QB_DEFAULT_FSTYPE:sulka-verified-boot = "wic"
+    # Attach the disk image as virtio-blk, not virtio-scsi, so that it is
+    # virtio 0 in U-Boot and /dev/vda in Linux
+    QB_DRIVE_TYPE:sulka-verified-boot = "/dev/vd"

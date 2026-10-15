@@ -3,3 +3,4 @@ meta-*
 bitbake
 openembedded-core
 auth-keys
+fit-keys

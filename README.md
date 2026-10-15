@@ -14,6 +14,7 @@ This repository is the top level of the project: it holds the kas configuration 
 - ✍️ Kernel module signing, with unsigned modules refused
 - 🔒 Read-only root file system
 - ⛔ Locked-down U-Boot console with command allowlisting
+- ✅ Verified boot of signed FIT images with U-Boot, enabled on the `qemuarm64` reference
 - 📋 Audit logging and a software bill of materials for every image
 - 🐢 Applied hardening information from [Lynis](https://cisofy.com/lynis/) and [OpenSCAP](https://www.open-scap.org/)
 
@@ -98,7 +99,7 @@ kas shell kas-sulka.yml -c 'bitbake -e core-image-base'
 | `kas-layers.yml` | The layer repositories and the revisions they are pinned to. |
 | `kas-sulka-configuration.yml` | Build configuration, written into `local.conf`. **This is the file you can edit** to configure Sulka. |
 | `extra_fragments/` | Optional configurations that can be appended to a build command. See below. |
-| `scripts/` | Helper scripts for generating the module signing keys and, if you install SSH keys at build time, an SSH key pair. |
+| `scripts/` | Helper scripts for generating the module signing keys, the FIT signing keys for verified boot and, if you install SSH keys at build time, an SSH key pair. |
 
 To build for other hardware, add your own configuration file to the list rather than editing these, for example `kas build kas-sulka.yml:my-board.yml`. See the [Raspberry Pi reference project](https://codeberg.org/AltidSec/kas-sulka-raspberrypi-example) for an example.
 
@@ -111,6 +112,7 @@ To build for other hardware, add your own configuration file to the list rather 
 | `audit.yml` | Installs Lynis, OpenSCAP, the SCAP Security Guide and kernel-hardening-checker so the running image can be audited. |
 | `development.yml` | Turns on Sulka development mode, installs the OpenSSH server, loosens the firewall to allow SSH and ICMP, and adds the SELinux tooling. Convenient during development, not for production images. |
 | `kas-layers-development.yml` | Follows the development branches of the Sulka layers instead of the pinned release tags. |
+| `qemuarm64.yml` | Builds for `qemuarm64` instead of `qemux86-64`. `qemuarm64` is the reference machine for verified boot, which the fragment enables, so the build needs FIT signing keys generated with `scripts/generate_fit_signing_keys.sh`. See [verified boot](https://altidsec.com/sulka/documentation/user-guide.html#verified-boot) in the user guide. |
 
 For example, to build a development image that can be audited:
 
