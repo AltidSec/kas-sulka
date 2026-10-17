@@ -24,6 +24,8 @@ local_conf_header:
     IMAGE_FSTYPES:append:sulka-verified-boot = " wic"
     IMAGE_TYPEDEP:wic:append:sulka-verified-boot = " ${SULKA_ROOTFS_IMAGE_TYPE}"
     WKS_FILE:sulka-verified-boot = "sulka-verified-boot-qemuarm64.wks.in"
+    # Leave out the bootloaders wic depends on by default
+    WKS_FILE_DEPENDS:sulka-verified-boot = "${WKS_FILE_DEPENDS_DEFAULT}"
     IMAGE_BOOT_FILES:sulka-verified-boot = "fitImage"
     QB_DEFAULT_BIOS:sulka-verified-boot = "u-boot.bin"
     QB_DEFAULT_KERNEL:sulka-verified-boot = "none"
