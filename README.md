@@ -12,7 +12,7 @@ This repository is the top level of the project: it holds the kas configuration 
 - 🔎 Mandatory access control with SELinux
 - 🛡️ Hardened kernel configuration and runtime `sysctl` settings
 - ✍️ Kernel module signing, with unsigned modules refused
-- 🔒 Read-only root file system
+- 🔒 Read-only root file system, protected with dm-verity
 - ⛔ Locked-down U-Boot console with command allowlisting
 - ✅ Verified boot of signed FIT images with U-Boot, enabled on the `qemuarm64` reference
 - 📋 Audit logging and a software bill of materials for every image
@@ -95,13 +95,13 @@ kas shell kas-sulka.yml -c 'bitbake -e core-image-base'
 
 | Path | Purpose |
 |---|---|
-| `kas-sulka.yml` | Top-level configuration. Sets the machine, distro and target image, and includes the two files below. |
+| `kas-sulka.yml` | Top-level configuration. Sets the machine, distro and target image, sets `DM_VERITY_IMAGE` to the target image, and includes the two files below. |
 | `kas-layers.yml` | The layer repositories and the revisions they are pinned to. |
 | `kas-sulka-configuration.yml` | Build configuration, written into `local.conf`. **This is the file you can edit** to configure Sulka. |
 | `extra_fragments/` | Optional configurations that can be appended to a build command. See below. |
 | `scripts/` | Helper scripts for generating the module signing keys, the FIT signing keys for verified boot and, if you install SSH keys at build time, an SSH key pair. |
 
-To build for other hardware, add your own configuration file to the list rather than editing these, for example `kas build kas-sulka.yml:my-board.yml`. See the [Raspberry Pi reference project](https://codeberg.org/AltidSec/kas-sulka-raspberrypi-example) for an example.
+To build for other hardware, add your own configuration file to the list rather than editing these, for example `kas build kas-sulka.yml:my-board.yml`. If your configuration changes the target image, set `DM_VERITY_IMAGE` to it too. See the [Raspberry Pi reference project](https://codeberg.org/AltidSec/kas-sulka-raspberrypi-example) for an example.
 
 ## Optional Configuration Fragments
 

@@ -8,3 +8,7 @@ machine: qemux86-64
 distro: sulka
 target: core-image-base
 
+local_conf_header:
+  05-kas-sulka: |
+    # The image dm-verity protects, which is the target image
+    DM_VERITY_IMAGE ?= "core-image-base"
