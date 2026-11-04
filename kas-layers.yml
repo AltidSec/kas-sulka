@@ -3,20 +3,20 @@ header:
 repos:
   bitbake:
     url: https://git.openembedded.org/bitbake
-    tag: yocto-6.0.1
-    commit: 22021758e66737bcf68dfd2b74adc6a0cb1d42d9
+    tag: yocto-6.0.4
+    commit: 51fd94a67fa17650a9ff623492005972bbc7d26f
     layers:
       bitbake: disabled
   openembedded-core:
     url: https://git.openembedded.org/openembedded-core
-    tag: yocto-6.0.1
-    commit: 06dd66e6220e5ce4ed4b9af4d8231ae5f0a8ce80
+    tag: yocto-6.0.4
+    commit: 0f03c732a0a2d0506b41b1abe60b3f368b2300dc
     layers:
       meta:
   meta-openembedded:
     url: https://git.openembedded.org/meta-openembedded
     branch: wrynose
-    commit: 100027977216601000cbefc42c2ff6cf667e7b5e
+    commit: c0fcd7cca3760ef24e087ac4a31b8f357cb204da
     layers:
       meta-oe:
       meta-python:
@@ -24,18 +24,18 @@ repos:
   meta-security:
     url: https://git.yoctoproject.org/meta-security
     branch: wrynose
-    commit: c0d1d6200e7a84c39fb940cb1f22aad4b0b3d808
+    commit: 2703974d5e2d61b221dffa302c2e059a522adbf3
     layers:
       ../meta-security:
       meta-integrity:
   meta-selinux:
     url: https://git.yoctoproject.org/meta-selinux
     branch: wrynose
-    commit: 1c3a699f363167571ab39fecb0fe6f56691a4e20
+    commit: 18ee2dfdf7e6aff6f23afb67d42bfc3e963f2770
   meta-clang:
     url: https://github.com/kraj/meta-clang.git
     branch: wrynose
-    commit: 78c5e12f08198f4f257a9348516d2103cd617c1d
+    commit: ef0d22f21910a0c30c967eeb17d8f209806e2d81
   meta-sulka-distro:
     url: https://codeberg.org/AltidSec/meta-sulka-distro.git
     tag: 1.1.0
