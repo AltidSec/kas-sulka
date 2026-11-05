@@ -3,14 +3,14 @@ header:
 repos:
   poky:
     url: https://git.yoctoproject.org/poky
-    commit: 6ccffb86e86b4d41f61dc0c06c2b732c72676537
-    branch: scarthgap
+    commit: 4fb7016a07507683359ebd620f1951fd5ea44bfa
+    tag: yocto-5.0.21
     layers:
       meta:
       meta-yocto-bsp:
   meta-openembedded:
     url: https://git.openembedded.org/meta-openembedded
-    commit: 7eb94107580092f79ff1b639a87762fe6f96aa12
+    commit: 2db6aece32c7f8ebf6015b468e1b4e21de072e3b
     branch: scarthgap
     layers:
       meta-oe:
@@ -41,5 +41,5 @@ repos:
     branch: scarthgap
   meta-clang:
     url: https://github.com/kraj/meta-clang.git
-    commit: 7cf54f70cebe897d844f649024322bb096d7cb50
+    commit: cc29beb210ab94eacc53bbd67e287e4e33ede342
     branch: scarthgap
